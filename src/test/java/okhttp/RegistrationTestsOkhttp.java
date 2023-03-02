@@ -69,7 +69,7 @@ public class RegistrationTestsOkhttp {
         ErrorDto errorDto = gson.fromJson(response.body().string(),ErrorDto.class);
        
         Assert.assertEquals(errorDto.getStatus(),409);
-        Assert.assertTrue(errorDto.getMessage().toString().contains("User already exist"));
+        Assert.assertTrue(errorDto.getMessage().toString().contains("User already exists"));
         Assert.assertFalse(response.isSuccessful());
     }
 }
